@@ -1,6 +1,11 @@
 package io;
 
 import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Formatter;
+import java.util.Scanner;
 
 public class Exercise {
     public static void main(String[] args) {
@@ -21,6 +26,28 @@ public class Exercise {
         for (String s : files) {
             System.out.println("directory content : "+s);
         }
+
+        File fileThree = new File("/home/mohammad/IdeaProjects/base/resources/mohammad.txt");
+        //FileReader
+        // FileWriter
+        try {
+            // can read file with scanner
+            Scanner scanner = new Scanner(fileThree);
+            // we want to create new file with formatter
+            Formatter formatter = new Formatter("/home/mohammad/IdeaProjects/base/resources/mohammadTwo.txt");
+             while (scanner.hasNextLine()){
+                 String line = scanner.nextLine();
+                 if (!line.startsWith("good")){
+                     formatter.format("%s\n",line);
+                 }
+             }
+             scanner.close();
+             // close dar write ahamiat bishtari dare ke agar file neveshte nashode stream dar an , hatman in kar anjam beshe, be alave hamon azad sazi resource
+             formatter.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
 
     }
 }
