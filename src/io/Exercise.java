@@ -49,5 +49,21 @@ public class Exercise {
         }
 
 
+        // try with resources help me to autoClosable if objects that new implement of it
+        try(
+                Scanner scannerTwo = new Scanner(fileThree);
+                Formatter formatterTwo = new Formatter("/home/mohammad/IdeaProjects/base/resources/mohammadThree.txt");
+        ){
+            while (scannerTwo.hasNextLine()){
+                String line = scannerTwo.nextLine();
+                if (!line.startsWith("good")){
+                    formatterTwo.format("%s\n",line);
+                }
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+
     }
 }
