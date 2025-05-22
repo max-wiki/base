@@ -13,7 +13,7 @@ public class WriteTextFile {
             writer.write("this is a line. \n");
             writer.write("this is second \t line.\n");
             writer.close();
-        } catch (IOException e) {
+        } catch (IOException e) { // for example when not access to file
             throw new RuntimeException(e);
         }
 
