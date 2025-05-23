@@ -16,6 +16,7 @@ public class ServerSockerExample {
                  * listen to call for accept
                  * if every app connect to it , accept method finished
                  * with finish accept an object of type Socket created
+                 * usually use multi thread for server to handle several user
                  * */
                 ServerSocket serverSocket = new ServerSocket(8080);
                 // is a blocking method , wait another app to connect it

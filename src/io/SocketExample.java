@@ -30,6 +30,9 @@ public class SocketExample {
                 String received = socketIn.nextLine();
                 System.out.println("received: " + received);
                 System.out.flush();
+                // can send bytes with socket
+              //  byte[] bytes = new byte[]{1,3,127,2};
+             //   socket.getOutputStream().write(bytes);
             } while (!next.equals("exit"));
 
         } catch (UnknownHostException e) {
