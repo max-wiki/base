@@ -31,6 +31,7 @@ public class Nio2Example {
             if (good){
                 lines.remove(i);
             }
+            // method write used utf-8 in implementation
             Files.write(Paths.get("/home/mohammad/IdeaProjects/base/resources/mohammadFour.txt"),lines);
         }
 
