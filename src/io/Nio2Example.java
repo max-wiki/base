@@ -25,6 +25,7 @@ public class Nio2Example {
         // for solve problem in collection remove a
         // data and not have problem with next item ,
         // we use from last to first from Collection
+        // iterate from last to first
         for(int i = lines.size()-1 ;i >= 0;i--){
             boolean good = lines.get(i).startsWith("good");
             if (good){
