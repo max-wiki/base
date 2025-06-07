@@ -5,3 +5,10 @@ ________________
 functional interface: only have one abstract method 
 all another method should have default implementation 
 ________________
+lambda expression: a code snippet that describes the body of a function 
+used in functional interface, 
+for example :
+r -> r*2*3.14
+(x,y) -> x + y
+___________________
+
